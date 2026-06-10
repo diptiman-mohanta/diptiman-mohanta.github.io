@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Diptiman Mohanta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">DM</a>
+    <nav class="nav">
+      <a href="index.html">About</a>
+      <a href="blog.html" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Notebook</p>
+    <h1 class="name">Blog</h1>
+    <p class="role">Notes from the lab — experiments, reading, and things worth writing down.</p>
+  </section>
+
+  <section>
+    <div id="list"></div>
+  </section>
+
+  <footer>© <span id="yr"></span> Diptiman Mohanta</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="assets/site.js"></script>
+<script>
+  document.getElementById("yr").textContent = new Date().getFullYear();
+  renderList("list");
+</script>
+</body>
+</html>
