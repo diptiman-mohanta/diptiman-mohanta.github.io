@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diptiman Mohanta — Signal Processing & ML</title>
 <meta name="description" content="Electrical engineer working on signal processing and machine learning at SPIRE Lab, IISc.">
+<meta name="theme-color" content="#0C0F14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -24,20 +25,21 @@
   <section class="hero">
     <p class="eyebrow">Signal Processing · Machine Learning</p>
     <h1 class="name">Diptiman Mohanta</h1>
-    <p class="role">Project Associate at SPIRE Lab, Indian Institute of Science (IISc), Bangalore — building ASR systems for low-resource Indian languages.</p>
+    <p class="role">Project Associate at <strong>SPIRE Lab, Indian Institute of Science (IISc), Bangalore</strong> — building ASR systems for low-resource Indian languages.</p>
 
-    <svg class="trace" viewBox="0 0 720 56" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M0,28 L80,28 100,28 110,10 120,46 130,18 140,38 150,28 L260,28 280,28 290,6 300,50 310,14 320,42 330,28 L460,28 480,28 490,12 500,44 510,20 520,36 530,28 L640,28 660,28 670,16 680,40 690,28 L720,28" />
+    <svg class="trace" viewBox="0 0 760 64" preserveAspectRatio="none" aria-hidden="true">
+      <line class="grid-line" x1="0" y1="32" x2="760" y2="32" />
+      <path class="wave" d="M0,32 L90,32 104,32 112,12 120,50 128,20 136,42 144,32 L280,32 300,32 308,8 316,54 324,16 332,46 340,32 L490,32 510,32 518,14 526,48 534,22 542,40 550,32 L680,32 700,32 708,18 716,44 724,32 L760,32" />
     </svg>
   </section>
 
   <section>
-    <h2>What I work on</h2>
+    <h2>Focus</h2>
     <ul class="clean">
-      <li><span class="tag">speech / nlp</span> &nbsp; ASR for Indic languages, text normalization, character / BPE / SSM language models.</li>
-      <li><span class="tag">biomedical</span> &nbsp; ECG / EEG classification, time-frequency analysis (VMD, DWT, STFT), signal-to-image methods.</li>
-      <li><span class="tag">deep learning</span> &nbsp; Complex-valued neural networks, U-Net segmentation, explainability (SHAP, Grad-CAM).</li>
-      <li><span class="tag">medical ai</span> &nbsp; Diagnostic systems, clinical data pipelines, explainable healthcare models.</li>
+      <li><span class="tag">speech / nlp</span><span class="desc">ASR for Indic languages, text normalization, character / BPE / SSM language models.</span></li>
+      <li><span class="tag">biomedical</span><span class="desc">ECG / EEG classification, time-frequency analysis (VMD, DWT, STFT), signal-to-image methods.</span></li>
+      <li><span class="tag">deep learning</span><span class="desc">Complex-valued neural networks, U-Net segmentation, explainability (SHAP, Grad-CAM).</span></li>
+      <li><span class="tag">medical ai</span><span class="desc">Diagnostic systems, clinical data pipelines, explainable healthcare models.</span></li>
     </ul>
   </section>
 
@@ -64,7 +66,10 @@
     </div>
   </section>
 
-  <footer>© <span id="yr"></span> Diptiman Mohanta · built with plain HTML, hosted on GitHub Pages</footer>
+  <footer>
+    <span>© <span id="yr"></span> Diptiman Mohanta</span>
+    <span>plain HTML · GitHub Pages</span>
+  </footer>
 </div>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
