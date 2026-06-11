@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Diptiman Mohanta</title>
+<title>Notes - Diptiman Mohanta</title>
 <meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,25 +11,28 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="wrap">
 
   <header class="topbar">
     <a class="brand" href="index.html">Diptiman Mohanta</a>
-    <nav class="nav">
-      <a href="index.html">About</a>
-      <a href="blog.html" class="active">Blog</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="active" aria-current="page">Notes</a>
+      <a href="cv.pdf">CV</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <p class="eyebrow">Notebook</p>
-    <h1 class="name">Blog</h1>
-    <p class="role">Notes from the lab — experiments, reading, and things worth writing down.</p>
-  </section>
+  <main id="main">
+  <div class="page-head">
+    <h1>Notes</h1>
+    <p>Research notes - experiments, paper readings, and methods worth writing down.</p>
+  </div>
 
   <section>
     <div id="list"></div>
   </section>
+  </main>
 
   <footer>
     <span>© <span id="yr"></span> Diptiman Mohanta</span>
