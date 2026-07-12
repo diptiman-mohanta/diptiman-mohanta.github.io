@@ -1,5 +1,5 @@
 /* ============================================================
-   Diptiman Mohanta — researcher site
+   Diptiman Mohanta - researcher site
    Academic editorial: type, hierarchy, whitespace. One accent.
    ============================================================ */
 
@@ -170,7 +170,7 @@ h2::before {
 
 p { margin: 0 0 var(--s2); }
 
-/* research areas — definition rows */
+/* research areas - definition rows */
 .research-item {
   display: grid;
   grid-template-columns: 190px 1fr;
@@ -191,7 +191,7 @@ p { margin: 0 0 var(--s2); }
 }
 .research-item p { color: var(--muted); font-size: 0.95rem; margin: 0; }
 
-/* projects — research contributions */
+/* projects - research contributions */
 .project {
   padding: var(--s3) 20px;
   margin-bottom: 14px;
