@@ -266,6 +266,79 @@ p { margin: 0 0 var(--s2); }
 }
 .news-item p { margin: 0; font-size: 0.96rem; }
 
+/* ---------- timeline ---------- */
+.timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-top: var(--s2);
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  opacity: 0.4;
+}
+.tl-item { position: relative; padding: 0 0 var(--s3); }
+.tl-item:last-child { padding-bottom: 4px; }
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.tl-item:hover::before { background: var(--accent); transform: scale(1.15); }
+.tl-date {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.tl-item .tl-body { margin: 3px 0 0; font-size: 0.97rem; }
+.tl-item .tl-title { font-weight: 600; color: var(--ink); }
+
+/* ---------- achievements ---------- */
+.award {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--accent-soft), var(--bg) 78%);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.award + .award { margin-top: 10px; }
+.award:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.award .medal {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.15rem;
+}
+.award-title { font-weight: 600; margin: 0; font-size: 1rem; }
+.award-meta { font-size: 0.85rem; color: var(--muted); margin: 2px 0 0; }
+
 /* ---------- blog list ---------- */
 
 .page-head { padding: var(--s5) 0 0; }
