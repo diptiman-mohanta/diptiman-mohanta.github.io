@@ -5,16 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diptiman Mohanta - Speech Recognition Researcher, SPIRE Lab, IISc</title>
 <meta name="description" content="Researcher at SPIRE Lab, IISc Bangalore, working on automatic speech recognition for low-resource Indian languages. Earlier work in biomedical signal processing, complex-valued deep learning, and radar sensing.">
-<meta name="theme-color" content="#FFFFFF">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1417" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://diptiman-mohanta.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Diptiman Mohanta - Speech Recognition Researcher, IISc">
 <meta property="og:description" content="ASR for low-resource Indian languages at SPIRE Lab, IISc. Earlier work: biomedical signals, complex-valued deep learning, radar sensing.">
 <meta property="og:url" content="https://diptiman-mohanta.github.io/">
+<meta property="og:image" content="https://diptiman-mohanta.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diptiman Mohanta - Speech Recognition Researcher, IISc">
+<meta name="twitter:description" content="ASR for low-resource Indian languages at SPIRE Lab, IISc.">
+<meta name="twitter:image" content="https://diptiman-mohanta.github.io/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFFFFF'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' font-style='italic' text-anchor='middle' fill='%2314655F'%3EDM%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -54,7 +60,10 @@
   <main id="main">
 
   <section class="intro">
-    <img class="headshot" src="photo.jpg" alt="Diptiman Mohanta" width="120" height="120">
+    <picture>
+      <source srcset="photo.webp" type="image/webp">
+      <img class="headshot" src="photo-sm.jpg" alt="Diptiman Mohanta" width="116" height="116" fetchpriority="high">
+    </picture>
 
     <!-- NAME -->
     <h1 class="name">Diptiman Mohanta</h1>
@@ -109,6 +118,7 @@
       <h3>Complex-valued deep learning for ECG classification</h3>
       <p class="meta">Perception &amp; Intelligence Lab, IIT Kanpur · 2025</p>
       <p>Developed hybrid real/complex-valued architectures that model phase–magnitude structure in Gramian Angular Field representations of ECG; basis of Complex AFNet for atrial fibrillation detection (<em>IEEE TAI</em>, 2026).</p>
+      <a class="repo-link" href="https://github.com/PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection" data-repo="PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection">Code repository</a>
     </div>
 
     <div class="project">
@@ -121,6 +131,7 @@
       <h3>Micro-Doppler target classification with FMCW radar</h3>
       <p class="meta">2024</p>
       <p>Built a drone-versus-bird classifier from FMCW micro-Doppler signatures; spectrogram-based deep learning improved substantially over conventional signal processing baselines.</p>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/Radar-Based-UAV-Classification" data-repo="diptiman-mohanta/Radar-Based-UAV-Classification">Code repository</a>
     </div>
   </section>
 
@@ -129,15 +140,16 @@
     <h2>Open source</h2>
 
     <div class="project">
-      <h3><a href="https://github.com/diptiman-mohanta/sigclean">sigclean</a></h3>
+      <h3><a href="https://github.com/diptiman-mohanta/sigclean" data-repo="diptiman-mohanta/sigclean">sigclean</a></h3>
       <p class="meta">Python library · 2025</p>
       <p>Filtering, denoising, and segmentation for biomedical signals (ECG, EEG, EMG) - reproducible preprocessing for physiological pipelines.</p>
     </div>
 
     <div class="project">
-      <h3><a href="https://github.com/diptiman-mohanta/SigFeatX">SigFeatX</a></h3>
+      <h3><a href="https://github.com/diptiman-mohanta/SigFeatX" data-repo="diptiman-mohanta/SigFeatX">SigFeatX</a></h3>
       <p class="meta">Python library · 2025</p>
       <p>Statistical feature extraction for 1-D signals: wavelet, EMD, and VMD decomposition with time- and frequency-domain feature sets behind one interface.</p>
+      <a class="repo-link" href="https://pypi.org/project/SigFeatX/">Available on PyPI</a>
     </div>
   </section>
 
@@ -214,5 +226,6 @@
   </footer>
 </div>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+<script src="stars.js" defer></script>
 </body>
 </html>

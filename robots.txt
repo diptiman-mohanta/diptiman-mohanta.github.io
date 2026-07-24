@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://diptiman-mohanta.github.io/sitemap.xml
