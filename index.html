@@ -41,6 +41,44 @@
   "knowsAbout": ["Automatic Speech Recognition", "Low-Resource Languages", "Signal Processing", "Biomedical Signal Analysis", "Deep Learning"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "name": "Complex AFNet: A Hybrid Complex-Valued Deep Network for Atrial Fibrillation Detection",
+      "author": [
+        { "@type": "Person", "name": "P. S. P. K. Mahali" },
+        { "@type": "Person", "name": "Diptiman Mohanta" },
+        { "@type": "Person", "name": "T. Sandhan" }
+      ],
+      "isPartOf": { "@type": "Periodical", "name": "IEEE Transactions on Artificial Intelligence" },
+      "datePublished": "2026",
+      "identifier": "https://doi.org/10.1109/TAI.2026.3671218",
+      "sameAs": "https://doi.org/10.1109/TAI.2026.3671218",
+      "url": "https://github.com/PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "SigFeatX",
+      "description": "Statistical feature extraction for 1-D signals: wavelet, EMD, and VMD decomposition with time- and frequency-domain feature sets behind one interface.",
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/diptiman-mohanta/SigFeatX",
+      "url": "https://pypi.org/project/SigFeatX/",
+      "author": { "@type": "Person", "name": "Diptiman Mohanta" }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "sigclean",
+      "description": "Filtering, denoising, and segmentation for biomedical signals (ECG, EEG, EMG) - reproducible preprocessing for physiological pipelines.",
+      "programmingLanguage": "Python",
+      "codeRepository": "https://github.com/diptiman-mohanta/sigclean",
+      "author": { "@type": "Person", "name": "Diptiman Mohanta" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -52,7 +90,7 @@
     <nav class="nav" aria-label="Primary">
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="blog.html">Notes</a>
-      <a href="cv.pdf" class="btn">CV</a>
+      <a href="cv.pdf" class="btn" download aria-label="Download CV (PDF)">CV</a>
     </nav>
   </header>
 
@@ -131,13 +169,15 @@
       <h3><a href="https://github.com/diptiman-mohanta/SigFeatX" data-repo="diptiman-mohanta/SigFeatX">SigFeatX</a></h3>
       <p class="meta">Python library · PyPI</p>
       <p>Statistical feature extraction for 1-D signals: wavelet, EMD, and VMD decomposition with time- and frequency-domain feature sets behind one interface.</p>
-      <a class="repo-link" href="https://pypi.org/project/SigFeatX/">Available on PyPI</a>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/SigFeatX" aria-label="SigFeatX - code repository">Code repository</a>
+      <a class="repo-link" href="https://pypi.org/project/SigFeatX/" aria-label="SigFeatX on PyPI" style="margin-left:16px">PyPI</a>
     </div>
 
     <div class="project">
       <h3><a href="https://github.com/diptiman-mohanta/sigclean" data-repo="diptiman-mohanta/sigclean">sigclean</a></h3>
       <p class="meta">Python library</p>
       <p>Filtering, denoising, and segmentation for biomedical signals (ECG, EEG, EMG) - reproducible preprocessing for physiological pipelines.</p>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/sigclean" aria-label="sigclean - code repository">Code repository</a>
     </div>
   </section>
 
@@ -155,21 +195,21 @@
       <h3>Micro-Doppler target classification with FMCW radar</h3>
       <p class="meta">2024</p>
       <p>Built a drone-versus-bird classifier from FMCW micro-Doppler signatures; spectrogram-based deep learning improved substantially over conventional signal processing baselines.</p>
-      <a class="repo-link" href="https://github.com/diptiman-mohanta/Radar-Based-UAV-Classification" data-repo="diptiman-mohanta/Radar-Based-UAV-Classification">Code repository</a>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/Radar-Based-UAV-Classification" data-repo="diptiman-mohanta/Radar-Based-UAV-Classification" aria-label="Micro-Doppler FMCW radar classification - code repository">Code repository</a>
     </div>
 
     <div class="project">
       <h3>Rocket fin stabilization system</h3>
       <p class="meta">Arduino · C++</p>
       <p>Arduino-based active fin stabilization for model rockets using an MPU6050 IMU and servo actuators to correct roll and pitch in flight.</p>
-      <a class="repo-link" href="https://github.com/diptiman-mohanta/rocket-fin-stabilizer" data-repo="diptiman-mohanta/rocket-fin-stabilizer">Code repository</a>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/rocket-fin-stabilizer" data-repo="diptiman-mohanta/rocket-fin-stabilizer" aria-label="Rocket fin stabilization system - code repository">Code repository</a>
     </div>
 
     <div class="project">
       <h3>EEG-based lie detection</h3>
       <p class="meta">MATLAB</p>
       <p>Deception detection from multi-channel EEG using wavelet- and VMD-based feature extraction, feature selection, and ensemble classifiers.</p>
-      <a class="repo-link" href="https://github.com/diptiman-mohanta/EEG-Lie-Detection-using-Wavelet-based-Feature-Extraction-and-Ensemble-Methods" data-repo="diptiman-mohanta/EEG-Lie-Detection-using-Wavelet-based-Feature-Extraction-and-Ensemble-Methods">Code repository</a>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/EEG-Lie-Detection-using-Wavelet-based-Feature-Extraction-and-Ensemble-Methods" data-repo="diptiman-mohanta/EEG-Lie-Detection-using-Wavelet-based-Feature-Extraction-and-Ensemble-Methods" aria-label="EEG-based lie detection - code repository">Code repository</a>
     </div>
   </section>
 
@@ -233,7 +273,7 @@
       <a href="https://github.com/diptiman-mohanta">GitHub</a>
       <a href="https://orcid.org/0009-0001-4744-8465">ORCID</a>
       <a href="https://www.linkedin.com/in/diptiman-mohanta-69987b267">LinkedIn</a>
-      <a href="cv.pdf">CV (PDF)</a>
+      <a href="cv.pdf" download>CV (PDF)</a>
     </p>
   </section>
 
