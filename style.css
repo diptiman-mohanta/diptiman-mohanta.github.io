@@ -368,6 +368,7 @@ p { margin: 0 0 var(--s2); }
 .pub-venue strong { font-weight: 600; color: var(--body); }
 .pub-venue em { font-style: italic; }
 .pub-note { font-size: 0.93rem; color: var(--body); margin: 8px 0 0; }
+.pub-note strong { font-weight: 600; color: var(--ink); }
 .pub-links {
   font-family: var(--disp);
   font-size: 11.5px;

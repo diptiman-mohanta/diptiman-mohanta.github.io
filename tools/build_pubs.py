@@ -28,6 +28,15 @@ def esc(text):
     return html.escape(str(text), quote=False)
 
 
+def rich(text):
+    """Same, plus **bold**. Escaping happens first, so the only markup that can
+    reach the page is the <strong> this function puts there itself."""
+    out = esc(text)
+    while out.count("**") >= 2:
+        out = out.replace("**", "<strong>", 1).replace("**", "</strong>", 1)
+    return out
+
+
 def render(pubs):
     out = [START]
     for n, p in enumerate(pubs, 1):
@@ -51,7 +60,7 @@ def render(pubs):
         out.append('        <p class="pub-venue">%s · %s, %s</p>'
                    % (p["authors"], venue, esc(p["year"])))
         if p.get("note"):
-            out.append('        <p class="pub-note">%s</p>' % esc(p["note"]))
+            out.append('        <p class="pub-note">%s</p>' % rich(p["note"]))
         if links:
             out.append('        <p class="pub-links">%s</p>' % links)
         out.append('      </div>')

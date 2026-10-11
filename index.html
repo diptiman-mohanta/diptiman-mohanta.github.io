@@ -131,7 +131,7 @@
       <p class="position">Speech recognition for India's low-resource languages</p>
 
       <!-- INTRODUCTION -->
-      <p class="statement">I work on automatic speech recognition for low-resource Indian languages at the SPIRE Laboratory, IISc. I came to speech through signal processing: earlier work on biomedical signals and radar sensing, including complex-valued networks for atrial fibrillation detection published in <em>IEEE Transactions on Artificial Intelligence</em>, shaped a continuing focus on signal representations that let models learn from limited data.</p>
+      <p class="statement">I work on automatic speech recognition for low-resource Indian languages at the SPIRE Laboratory, IISc. I came to speech through signal processing — complex-valued networks for ECG analysis, radar sensing of vital signs — and that route left me with a continuing interest in signal representations that let models learn from limited data.</p>
 
       <!-- RESEARCH INTERESTS -->
       <p class="interests">Automatic speech recognition · Low-resource Indian languages · Signal representations</p>
@@ -218,7 +218,7 @@
       <div>
         <h3 class="pub-title">A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition</h3>
         <p class="pub-venue">S. Kumar, <strong>D. Mohanta</strong>, P. K. Ghosh · arXiv preprint arXiv:2609.30160, 2026</p>
-        <p class="pub-note">Moves Omni-temporal Classification's wildcard alignment paths from the word level to the token level, so an ambiguous token is bypassed without discarding supervision for the whole word. Beats CTC on all 25 tasks across 19 languages, for a 9.45% average relative WER reduction.</p>
+        <p class="pub-note">Developed token-level Omni-temporal Classification (OTC) for robust ASR training under transcript ambiguity, achieving a <strong>9.45% average relative WER reduction</strong> over CTC across 19 languages, 3 corpora, and 25 tasks. Introduced hybrid token- and word-level wildcard paths and an entropy-based relaxation schedule to improve transcription robustness and reduce dependence on training duration.</p>
         <p class="pub-links"><a href="https://arxiv.org/abs/2609.30160">arXiv</a></p>
       </div>
     </article>
@@ -258,6 +258,13 @@
       <p class="meta">Python library</p>
       <p>Filtering, denoising, and segmentation for biomedical signals (ECG, EEG, EMG) - reproducible preprocessing for physiological pipelines.</p>
       <a class="repo-link" href="https://github.com/diptiman-mohanta/sigclean" aria-label="sigclean - code repository">Code repository</a>
+    </div>
+
+    <div class="project">
+      <h3><a href="https://github.com/diptiman-mohanta/Local-Label" data-repo="diptiman-mohanta/Local-Label">Local-Label</a></h3>
+      <p class="meta">Python · Annotation tool</p>
+      <p>A local-first image annotation tool for building computer-vision datasets: bounding boxes and polygons, keyboard-driven labelling, and export to COCO, YOLO, and Pascal VOC. Nothing is uploaded - no account, no server, no database.</p>
+      <a class="repo-link" href="https://github.com/diptiman-mohanta/Local-Label" aria-label="Local-Label - code repository">Code repository</a>
     </div>
   </section>
 
