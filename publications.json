@@ -1,0 +1,29 @@
+[
+  {
+    "title": "A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition",
+    "authors": "S. Kumar, <strong>D. Mohanta</strong>, P. K. Ghosh",
+    "venue": "arXiv preprint arXiv:2609.30160",
+    "venue_italic": false,
+    "year": "2026",
+    "date": "2026-09-24",
+    "note": "Moves Omni-temporal Classification's wildcard alignment paths from the word level to the token level, so an ambiguous token is bypassed without discarding supervision for the whole word. Beats CTC on all 25 tasks across 19 languages, for a 9.45% average relative WER reduction.",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2609.30160" }
+    ],
+    "orcid_id": "arXiv:2609.30160"
+  },
+  {
+    "title": "Complex AFNet: A Hybrid Complex-Valued Deep Network for Atrial Fibrillation Detection",
+    "authors": "P. S. P. K. Mahali, <strong>D. Mohanta</strong>, T. Sandhan",
+    "venue": "IEEE Transactions on Artificial Intelligence",
+    "venue_italic": true,
+    "year": "2026",
+    "date": "2026-01-01",
+    "note": "A hybrid real/complex-valued architecture modelling phase–magnitude structure in Gramian Angular Field representations of ECG for atrial fibrillation detection.",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/TAI.2026.3671218" },
+      { "label": "Code", "url": "https://github.com/PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection", "repo": "PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection" }
+    ],
+    "orcid_id": "10.1109/tai.2026.3671218"
+  }
+]

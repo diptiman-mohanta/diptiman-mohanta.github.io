@@ -1,0 +1,64 @@
+name: Publications
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - publications.json
+      - tools/build_pubs.py
+      - .github/workflows/publications.yml
+  schedule:
+    # 06:00 UTC daily -- poll ORCID for papers not yet in publications.json
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  render:
+    # Regenerate the publications section whenever the data file changes.
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python tools/build_pubs.py
+      - name: Commit if the page changed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "index.html already matches publications.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Regenerate publications section from publications.json"
+          git push
+
+  check-orcid:
+    # Notice new papers. It never edits the site: ORCID has no author list,
+    # abstract or code link, so the one-line summary stays hand-written.
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        run: |
+          set +e
+          python tools/check_new_pubs.py > report.md
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat report.md
+      - name: Open an issue for new papers
+        if: steps.check.outputs.status == '2'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="New publication found on ORCID"
+          existing=$(gh issue list --state open --search "$title in:title" --json number --jq '.[0].number')
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file report.md
+          else
+            gh issue create --title "$title" --body-file report.md --label "" || \
+            gh issue create --title "$title" --body-file report.md
+          fi
