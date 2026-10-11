@@ -30,7 +30,7 @@ def esc(text):
 
 def render(pubs):
     out = [START]
-    for p in pubs:
+    for n, p in enumerate(pubs, 1):
         venue = esc(p["venue"])
         if p.get("venue_italic"):
             venue = f"<em>{venue}</em>"
@@ -43,16 +43,19 @@ def render(pubs):
             for l in p.get("links", [])
         )
         out.append('')
-        out.append('    <div class="pub">')
-        out.append('      <p class="pub-title">%s</p>' % esc(p["title"]))
+        out.append('    <article class="pub">')
+        out.append('      <span class="pub-no">%02d</span>' % n)
+        out.append('      <div>')
+        out.append('        <h3 class="pub-title">%s</h3>' % esc(p["title"]))
         # authors is trusted markup: it carries the <strong> around his own name
-        out.append('      <p class="pub-venue">%s · %s, %s</p>'
+        out.append('        <p class="pub-venue">%s · %s, %s</p>'
                    % (p["authors"], venue, esc(p["year"])))
         if p.get("note"):
-            out.append('      <p class="pub-note">%s</p>' % esc(p["note"]))
+            out.append('        <p class="pub-note">%s</p>' % esc(p["note"]))
         if links:
-            out.append('      <p class="pub-links">%s</p>' % links)
-        out.append('    </div>')
+            out.append('        <p class="pub-links">%s</p>' % links)
+        out.append('      </div>')
+        out.append('    </article>')
     out.append('')
     out.append(END)
     return "\n".join(out)

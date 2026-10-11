@@ -96,6 +96,7 @@
   ]
 }
 </script>
+<script>try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -105,42 +106,78 @@
   <header class="topbar">
     <a class="brand" href="index.html">Diptiman Mohanta</a>
     <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#software">Software</a>
       <a href="blog.html">Notes</a>
       <a href="cv.pdf" class="btn" target="_blank" rel="noopener" aria-label="View CV (PDF)">CV</a>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
     </nav>
   </header>
 
   <main id="main">
 
   <section class="intro">
-    <picture>
-      <source srcset="photo.webp" type="image/webp">
-      <img class="headshot" src="photo-sm.jpg" alt="Diptiman Mohanta" width="116" height="116" fetchpriority="high">
-    </picture>
+    <div>
+      <p class="eyebrow">SPIRE Lab · Indian Institute of Science</p>
 
-    <!-- NAME -->
-    <h1 class="name">Diptiman Mohanta</h1>
+      <!-- NAME -->
+      <h1 class="name">Diptiman Mohanta</h1>
 
-    <!-- TITLE -->
-    <p class="position">Project Associate · <a href="https://spire.ee.iisc.ac.in/">SPIRE Lab</a>, Indian Institute of Science, Bangalore</p>
+      <!-- TITLE -->
+      <p class="position">Speech recognition for India's low-resource languages</p>
 
-    <!-- RESEARCH INTERESTS -->
-    <p class="interests">Automatic speech recognition · low-resource Indian languages · signal representations</p>
+      <!-- INTRODUCTION -->
+      <p class="statement">I work on automatic speech recognition for low-resource Indian languages at the SPIRE Laboratory, IISc. I came to speech through signal processing: earlier work on biomedical signals and radar sensing, including complex-valued networks for atrial fibrillation detection published in <em>IEEE Transactions on Artificial Intelligence</em>, shaped a continuing focus on signal representations that let models learn from limited data.</p>
 
-    <!-- INTRODUCTION -->
-    <p class="statement">I work on automatic speech recognition for low-resource Indian languages at the SPIRE Laboratory, IISc. I came to speech through signal processing: earlier work on biomedical signals and radar sensing, including complex-valued networks for atrial fibrillation detection published in <em>IEEE Transactions on Artificial Intelligence</em>, shaped a continuing focus on signal representations that let models learn from limited data.</p>
+      <!-- RESEARCH INTERESTS -->
+      <p class="interests">Automatic speech recognition · Low-resource Indian languages · Signal representations</p>
+
+      <div class="hero-actions">
+        <a class="solid" href="#publications">Read the papers</a>
+        <a href="cv.pdf" target="_blank" rel="noopener">View CV</a>
+      </div>
+    </div>
+
+    <figure class="portrait">
+      <img class="headshot" src="photo.jpg" alt="Diptiman Mohanta" width="844" height="1030" fetchpriority="high">
+      <figcaption>Project Associate<br>SPIRE Lab, IISc Bangalore</figcaption>
+    </figure>
   </section>
+
+  <dl class="factbar">
+    <div class="fact">
+      <dt>Position</dt>
+      <dd>Project Associate, <a href="https://spire.ee.iisc.ac.in/">SPIRE Lab</a>, IISc</dd>
+    </div>
+    <div class="fact">
+      <dt>Focus</dt>
+      <dd>End-to-end ASR under scarce transcribed speech</dd>
+    </div>
+    <div class="fact">
+      <dt>Based in</dt>
+      <dd>Bangalore, India</dd>
+    </div>
+  </dl>
 
   <!-- CURRENTLY -->
   <section aria-label="Currently">
-    <h2>Currently</h2>
+    <div class="sec-head">
+      <p class="eyebrow">Status</p>
+      <h2>Currently</h2>
+    </div>
     <p>Building ASR systems for Indian languages with limited transcribed speech at SPIRE Lab, IISc Bangalore - dataset construction, text normalization for Indic scripts, and evaluation of multilingual and monolingual modeling approaches.</p>
   </section>
 
   <!-- CURRENT RESEARCH -->
-  <section aria-label="Current research">
-    <h2>Current research</h2>
+  <section id="research" aria-label="Current research">
+    <div class="sec-head">
+      <p class="eyebrow">01 — Research</p>
+      <h2>Current research</h2>
+    </div>
     <div class="research-item">
       <h3>Speech recognition for low-resource Indian languages</h3>
       <p>End-to-end ASR under scarce transcribed speech: multilingual and monolingual modeling, text normalization for Indic scripts, and language modeling at the character, BPE, and state-space level.</p>
@@ -149,7 +186,10 @@
 
   <!-- RECENT UPDATES -->
   <section aria-label="Recent updates">
-    <h2>Recent updates</h2>
+    <div class="sec-head">
+      <p class="eyebrow">02 — Updates</p>
+      <h2>Recent updates</h2>
+    </div>
     <div class="news-item">
       <time datetime="2026">2026</time>
       <p>Complex AFNet accepted in <em>IEEE Transactions on Artificial Intelligence</em>.</p>
@@ -165,24 +205,33 @@
   </section>
 
   <!-- PUBLICATIONS -->
-  <section aria-label="Publications">
-    <h2>Publications</h2>
+  <section id="publications" aria-label="Publications">
+    <div class="sec-head">
+      <p class="eyebrow">03 — Publications</p>
+      <h2>Publications</h2>
+    </div>
 
     <!-- PUBS:START (generated from publications.json by tools/build_pubs.py) -->
 
-    <div class="pub">
-      <p class="pub-title">A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition</p>
-      <p class="pub-venue">S. Kumar, <strong>D. Mohanta</strong>, P. K. Ghosh · arXiv preprint arXiv:2609.30160, 2026</p>
-      <p class="pub-note">Moves Omni-temporal Classification's wildcard alignment paths from the word level to the token level, so an ambiguous token is bypassed without discarding supervision for the whole word. Beats CTC on all 25 tasks across 19 languages, for a 9.45% average relative WER reduction.</p>
-      <p class="pub-links"><a href="https://arxiv.org/abs/2609.30160">arXiv</a></p>
-    </div>
+    <article class="pub">
+      <span class="pub-no">01</span>
+      <div>
+        <h3 class="pub-title">A Training Criterion with Token-Level Tolerance to Transcription Ambiguity for Automatic Speech Recognition</h3>
+        <p class="pub-venue">S. Kumar, <strong>D. Mohanta</strong>, P. K. Ghosh · arXiv preprint arXiv:2609.30160, 2026</p>
+        <p class="pub-note">Moves Omni-temporal Classification's wildcard alignment paths from the word level to the token level, so an ambiguous token is bypassed without discarding supervision for the whole word. Beats CTC on all 25 tasks across 19 languages, for a 9.45% average relative WER reduction.</p>
+        <p class="pub-links"><a href="https://arxiv.org/abs/2609.30160">arXiv</a></p>
+      </div>
+    </article>
 
-    <div class="pub">
-      <p class="pub-title">Complex AFNet: A Hybrid Complex-Valued Deep Network for Atrial Fibrillation Detection</p>
-      <p class="pub-venue">P. S. P. K. Mahali, <strong>D. Mohanta</strong>, T. Sandhan · <em>IEEE Transactions on Artificial Intelligence</em>, 2026</p>
-      <p class="pub-note">A hybrid real/complex-valued architecture modelling phase–magnitude structure in Gramian Angular Field representations of ECG for atrial fibrillation detection.</p>
-      <p class="pub-links"><a href="https://doi.org/10.1109/TAI.2026.3671218">DOI</a><a href="https://github.com/PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection" data-repo="PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection">Code</a></p>
-    </div>
+    <article class="pub">
+      <span class="pub-no">02</span>
+      <div>
+        <h3 class="pub-title">Complex AFNet: A Hybrid Complex-Valued Deep Network for Atrial Fibrillation Detection</h3>
+        <p class="pub-venue">P. S. P. K. Mahali, <strong>D. Mohanta</strong>, T. Sandhan · <em>IEEE Transactions on Artificial Intelligence</em>, 2026</p>
+        <p class="pub-note">A hybrid real/complex-valued architecture modelling phase–magnitude structure in Gramian Angular Field representations of ECG for atrial fibrillation detection.</p>
+        <p class="pub-links"><a href="https://doi.org/10.1109/TAI.2026.3671218">DOI</a><a href="https://github.com/PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection" data-repo="PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection">Code</a></p>
+      </div>
+    </article>
 
     <!-- PUBS:END -->
 
@@ -190,8 +239,11 @@
   </section>
 
   <!-- RESEARCH SOFTWARE -->
-  <section aria-label="Research software">
-    <h2>Research software &amp; libraries</h2>
+  <section id="software" aria-label="Research software">
+    <div class="sec-head">
+      <p class="eyebrow">04 — Software</p>
+      <h2>Research software &amp; libraries</h2>
+    </div>
 
     <div class="project">
       <h3><a href="https://github.com/diptiman-mohanta/SigFeatX" data-repo="diptiman-mohanta/SigFeatX">SigFeatX</a></h3>
@@ -210,8 +262,11 @@
   </section>
 
   <!-- PROJECTS -->
-  <section aria-label="Projects">
-    <h2>Projects</h2>
+  <section id="projects" aria-label="Projects">
+    <div class="sec-head">
+      <p class="eyebrow">05 — Projects</p>
+      <h2>Projects</h2>
+    </div>
 
     <div class="project">
       <h3>Contactless vital-sign detection with CW radar</h3>
@@ -242,36 +297,45 @@
   </section>
 
   <!-- ACHIEVEMENTS & WRITING -->
-  <section aria-label="Achievements and writing">
-    <h2>Achievements &amp; writing</h2>
+  <section id="writing" aria-label="Achievements and writing">
+    <div class="sec-head">
+      <p class="eyebrow">06 — Awards & writing</p>
+      <h2>Achievements &amp; writing</h2>
+    </div>
 
     <h3 class="subhead">Awards</h3>
     <div class="award">
-      <span class="medal" aria-hidden="true">🏆</span>
-      <div>
-        <p class="award-title">Winner - SPRINT East Edition</p>
-        <p class="award-meta">iHUB-AWaDH, IIT Ropar · 2024</p>
-      </div>
+      <p class="award-title">Winner, SPRINT East Edition</p>
+      <p class="award-meta">iHUB-AWaDH, IIT Ropar · 2024</p>
     </div>
 
     <h3 class="subhead">Selected writing</h3>
-    <div class="pub">
-      <p class="pub-title">Delving into the World of Cables and Wires - Parts 1 &amp; 2</p>
-      <p class="pub-venue">D. Mohanta, S. K. Sahoo · <em>Electrical India Magazine</em>, Aug 2024</p>
-      <p class="pub-links"><a href="https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-1/">Part 1</a><a href="https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-2/">Part 2</a></p>
-    </div>
-    <div class="pub">
-      <p class="pub-title">Environmental Impacts of Solar Panels</p>
-      <p class="pub-venue">D. Mohanta, S. K. Sahoo · <em>Electrical India Magazine</em>, Mar 2024</p>
-      <p class="pub-links"><a href="https://www.electricalindia.in/environmental-impact-of-solar-panels/">Read</a></p>
-    </div>
+    <article class="pub">
+      <span class="pub-no">01</span>
+      <div>
+        <h3 class="pub-title">Delving into the World of Cables and Wires - Parts 1 &amp; 2</h3>
+        <p class="pub-venue">D. Mohanta, S. K. Sahoo · <em>Electrical India Magazine</em>, Aug 2024</p>
+        <p class="pub-links"><a href="https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-1/">Part 1</a><a href="https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-2/">Part 2</a></p>
+      </div>
+    </article>
+    <article class="pub">
+      <span class="pub-no">02</span>
+      <div>
+        <h3 class="pub-title">Environmental Impacts of Solar Panels</h3>
+        <p class="pub-venue">D. Mohanta, S. K. Sahoo · <em>Electrical India Magazine</em>, Mar 2024</p>
+        <p class="pub-links"><a href="https://www.electricalindia.in/environmental-impact-of-solar-panels/">Read</a></p>
+      </div>
+    </article>
 
     <p class="pubs-more">Research notes at <a href="blog.html">/notes</a>.</p>
   </section>
 
   <!-- TIMELINE -->
-  <section aria-label="Timeline">
-    <h2>Timeline</h2>
+  <section id="timeline" aria-label="Timeline">
+    <div class="sec-head">
+      <p class="eyebrow">07 — Timeline</p>
+      <h2>Timeline</h2>
+    </div>
     <div class="timeline">
       <div class="tl-item">
         <span class="tl-date">2025 - Present</span>
@@ -293,8 +357,11 @@
   </section>
 
   <!-- CONTACT -->
-  <section aria-label="Contact">
-    <h2>Contact</h2>
+  <section id="contact" aria-label="Contact">
+    <div class="sec-head">
+      <p class="eyebrow">08 — Contact</p>
+      <h2>Contact</h2>
+    </div>
     <p>The fastest way to reach me is email: <a href="mailto:diptimanmohanta7@gmail.com">diptimanmohanta7@gmail.com</a>.</p>
     <p class="contact-line">
       <a href="https://scholar.google.com/citations?user=8qWEbX8AAAAJ&amp;hl=en">Google Scholar</a>
@@ -316,5 +383,6 @@
 </div>
 <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 <script src="stars.js" defer></script>
+<script src="theme.js" defer></script>
 </body>
 </html>
