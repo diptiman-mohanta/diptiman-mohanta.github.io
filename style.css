@@ -334,6 +334,14 @@ p { margin: 0 0 var(--s2); }
 
 /* ---------- numbered entries (publications, writing) ---------- */
 
+/* Each group is its own element so that :first-of-type / :last-of-type below
+   scope to the group, not to the whole section: every group numbers from one
+   and drops the rule under its last entry. */
+.pub-group + .pub-group { margin-top: var(--s4); }
+.count { color: var(--faint); }
+h2 .count { font-size: 0.68em; font-weight: 700; vertical-align: 0.18em; }
+
+
 .pub {
   display: grid;
   grid-template-columns: 46px 1fr;

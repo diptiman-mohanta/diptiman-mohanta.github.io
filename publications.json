@@ -13,7 +13,8 @@
         "url": "https://arxiv.org/abs/2609.30160"
       }
     ],
-    "orcid_id": "arXiv:2609.30160"
+    "orcid_id": "arXiv:2609.30160",
+    "type": "preprint"
   },
   {
     "title": "Complex AFNet: A Hybrid Complex-Valued Deep Network for Atrial Fibrillation Detection",
@@ -34,6 +35,41 @@
         "repo": "PSPritish/C-AFNet-A-Hybrid-Complex-Valued-Deep-Network-for-Atrial-Fibrillation-Detection"
       }
     ],
-    "orcid_id": "10.1109/tai.2026.3671218"
+    "orcid_id": "10.1109/tai.2026.3671218",
+    "type": "journal"
+  },
+  {
+    "title": "Delving into the World of Cables and Wires, Parts 1 & 2",
+    "authors": "<strong>D. Mohanta</strong>, S. K. Sahoo",
+    "venue": "Electrical India Magazine",
+    "venue_italic": true,
+    "year": "Aug 2024",
+    "date": "2024-08-01",
+    "type": "magazine",
+    "links": [
+      {
+        "label": "Part 1",
+        "url": "https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-1/"
+      },
+      {
+        "label": "Part 2",
+        "url": "https://www.electricalindia.in/delving-into-the-world-of-cables-wires-part-2/"
+      }
+    ]
+  },
+  {
+    "title": "Environmental Impacts of Solar Panels",
+    "authors": "<strong>D. Mohanta</strong>, S. K. Sahoo",
+    "venue": "Electrical India Magazine",
+    "venue_italic": true,
+    "year": "Mar 2024",
+    "date": "2024-03-01",
+    "type": "magazine",
+    "links": [
+      {
+        "label": "Read",
+        "url": "https://www.electricalindia.in/environmental-impact-of-solar-panels/"
+      }
+    ]
   }
 ]
